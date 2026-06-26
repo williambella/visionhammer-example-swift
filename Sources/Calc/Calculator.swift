@@ -8,7 +8,7 @@ public struct Calculator {
 
     /// BUG: multiplication is implemented as addition.
     /// Compiles cleanly, but CalculatorTests.testMultiply fails (2 * 3 -> 5, expected 6).
-    public func multiply(_ a: Int, _ b: Int) -> Int { a + b }
+    public func multiply(_ a: Int, _ b: Int) -> Int { a * b }
 
     /// Integer division. Returns nil on divide-by-zero instead of trapping.
     public func divide(_ a: Int, _ b: Int) -> Int? {
