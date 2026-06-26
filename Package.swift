@@ -7,6 +7,7 @@ let package = Package(
         .library(name: "Calc", targets: ["Calc"]),
         .executable(name: "CalcCheck", targets: ["CalcCheck"]),
         .executable(name: "MathEndpoint", targets: ["MathEndpoint"]),
+        .executable(name: "SubtractEndpoint", targets: ["SubtractEndpoint"]),
     ],
     targets: [
         .target(name: "Calc"),
@@ -16,5 +17,7 @@ let package = Package(
         .testTarget(name: "CalcTests", dependencies: ["Calc"]),
         // SCRUM-113: Math endpoint to calculate 2 * 4
         .executableTarget(name: "MathEndpoint", dependencies: ["Calc"]),
+        // SCRUM-115: Subtract endpoint to calculate 10 - 2
+        .executableTarget(name: "SubtractEndpoint", dependencies: ["Calc"]),
     ]
 )
